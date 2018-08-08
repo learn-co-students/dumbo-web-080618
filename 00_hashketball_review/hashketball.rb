@@ -9,11 +9,7 @@ def game_hash
       team_name: "Brooklyn Nets",
       colors: ["Black", "White"],
       players: [
-<<<<<<< HEAD
-       {
-=======
         {
->>>>>>> b31372d2a908673516e707aa8e68847445b042aa
           player_name: "Alan Anderson",
           number: 0,
           shoe: 16,
@@ -25,11 +21,7 @@ def game_hash
           slam_dunks: 1
         },
        {
-<<<<<<< HEAD
-          player_name: "Reggie Evans",
-=======
          player_name: "Reggie Evans",
->>>>>>> b31372d2a908673516e707aa8e68847445b042aa
           number: 30,
           shoe: 14,
           points: 12,
@@ -40,11 +32,7 @@ def game_hash
           slam_dunks: 7
         },
        {
-<<<<<<< HEAD
-          player_name: "Brook Lopez",
-=======
          player_name: "Brook Lopez",
->>>>>>> b31372d2a908673516e707aa8e68847445b042aa
           number: 11,
           shoe: 17,
           points: 17,
@@ -55,11 +43,7 @@ def game_hash
           slam_dunks: 15
         },
        {
-<<<<<<< HEAD
-          player_name: "Mason Plumlee",
-=======
          player_name: "Mason Plumlee",
->>>>>>> b31372d2a908673516e707aa8e68847445b042aa
           number: 1,
           shoe: 19,
           points: 26,
@@ -97,13 +81,8 @@ def game_hash
           blocks: 7,
           slam_dunks: 2
         },
-<<<<<<< HEAD
-        {
-          player_name:   "Bismak Biyombo",
-=======
        {
          player_name: "Bismak Biyombo",
->>>>>>> b31372d2a908673516e707aa8e68847445b042aa
           number: 0,
           shoe: 16,
           points: 12,
@@ -113,11 +92,7 @@ def game_hash
           blocks: 15,
           slam_dunks: 10
         },
-<<<<<<< HEAD
-       {
-=======
         {
->>>>>>> b31372d2a908673516e707aa8e68847445b042aa
           player_name: "DeSagna Diop",
           number: 2,
           shoe: 14,
@@ -155,16 +130,6 @@ def game_hash
   }
 end
 
-<<<<<<< HEAD
-def  num_points_scored(player_name)
-  # game_hash[:home][:players]
-  # game_hash[:away][:players]
-
-  players_array = game_hash[:home][:players].concat(game_hash[:away][:players])
-
-  binding.pry
-  puts players_array
-=======
 # Single Responsibility Principle
 
 def players_array
@@ -182,7 +147,6 @@ def num_points_scored(player_name)
 
   find_player(player_name)[:points]
   # binding.pry
->>>>>>> b31372d2a908673516e707aa8e68847445b042aa
   # Home
   # Go through game_hash, go through players
   # Iterate through the players until we find the name that matches player_name
@@ -193,13 +157,9 @@ def num_points_scored(player_name)
   # Puts points to the return or answer
 end
 
-<<<<<<< HEAD
-num_points_scored("Brendan Haywood")
-=======
 def shoe_size(player_name)
   find_player(player_name)[:shoe]
   # Go through the players, find the person with the player_name, return their shoe size
 end
 
 # puts num_points_scored("Brendan Haywood")
->>>>>>> b31372d2a908673516e707aa8e68847445b042aa
