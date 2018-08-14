@@ -18,10 +18,11 @@ gigi.write_book("Linters and Such", 123, technology)
 gigi.write_book("&&", 1233, technology)
 eva.write_book("Secret Life of Corgis", 456, pets)
 
+
 # gigi_book1 = Book.new("Linters and Such", 123, gigi)
 # gigi_book2 = Book.new("&&", 234, gigi)
 
 
 
-binding.pry
-0
+# binding.pry
+# 0

@@ -18,7 +18,6 @@ class Author
     Book.new(title, pages, self, genre)
   end
 
-
   # An author has many books
   def books
     # has many
@@ -27,17 +26,26 @@ class Author
     end
   end
 
+
   # An author has many genres **through** books
   def genres
-    # !. Find all the books this author has written
-    # implicit self - call the method "books", when there isn't
-    #books
-    # explicit self - I'm explicit calling a method
+    # 1. Find all the books this author has written
+    # implicit self - calls the method "books", when there isn't a variable by that name
+    # books
+    # explicit self - I'm explicitly calling a method
     self.books.map do |book|
       book.genre
     end
+
+
     # 2. Through all books, ask their genre
   end
+
+
+
+
+
+
 
 
 end
