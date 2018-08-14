@@ -1,14 +1,15 @@
 class Book
-  attr_reader :title, :pages, :author
+  attr_reader :title, :pages, :author, :genre
 
   # Book.all
   @@all = []
 
   # title, author, pages
-  def initialize(title, pages, author)
+  def initialize(title, pages, author, genre)
     @author = author
     @title = title
     @pages = pages
+    @genre = genre
 
     @@all << self
   end

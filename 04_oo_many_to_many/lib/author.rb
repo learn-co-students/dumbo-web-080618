@@ -11,17 +11,33 @@ class Author
     @age = age
   end
 
-  def write_book(title, pages)
+  def write_book(title, pages, genre)
     # Create a new book here
 
     # title, pages, and author
-    Book.new(title, pages, self)
+    Book.new(title, pages, self, genre)
   end
 
+
+  # An author has many books
   def books
     # has many
     Book.all.select do |book|
       book.author == self
     end
   end
+
+  # An author has many genres **through** books
+  def genres
+    # !. Find all the books this author has written
+    # implicit self - call the method "books", when there isn't
+    #books
+    # explicit self - I'm explicit calling a method
+    self.books.map do |book|
+      book.genre
+    end
+    # 2. Through all books, ask their genre
+  end
+
+
 end
