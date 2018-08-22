@@ -14,6 +14,8 @@ gigi.write_book("Linters and Such", 123)
 gigi.write_book("&&", 1233)
 eva.write_book("Secret Life of Corgis", 456)
 
+puts fave_books
+
 # gigi_book1 = Book.new("Linters and Such", 123, gigi)
 # gigi_book2 = Book.new("&&", 234, gigi)
 
