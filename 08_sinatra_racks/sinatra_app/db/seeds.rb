@@ -1,3 +1,3 @@
 Book.destroy_all
 
-GoogleBooks::Adapter.new("<INSERT AUTHOR NAME>").fetch_books
+GoogleBooks::Adapter.new("Stephen King").fetch_books
