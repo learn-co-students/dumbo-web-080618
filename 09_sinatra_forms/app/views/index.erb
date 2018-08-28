@@ -2,4 +2,8 @@
 
 <% @books.each do |book| %>
   <li><a href="/books/<%= book.id %>"><%= book.title %></a></li>
+  <form action="/books/<%= book.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="DELETE THIS BOOK">
+  </form>
 <% end %>
