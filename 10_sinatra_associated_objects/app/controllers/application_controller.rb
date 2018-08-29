@@ -65,7 +65,9 @@ class ApplicationController < Sinatra::Base
   # a thing
   post '/books' do
     # binding.pry
+
     @book = Book.create(params["book"])
+    # @book.author = Author.find(params["book"]["author_id"])
     redirect to("/books/#{@book.id}")
   end
 
@@ -80,6 +82,8 @@ class ApplicationController < Sinatra::Base
 
   # New Action shows us the new form
   get "/books/new" do
+    @authors = Author.all
+
     erb :new
   end
 
