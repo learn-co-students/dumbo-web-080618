@@ -1,0 +1,5 @@
+<%= @author.name %>
+
+<%= form_tag("/authors/#{@author.id}", method: :delete) do %>
+  <%= submit_tag "DELETE THIS AUTHOR" %>
+<% end %>
