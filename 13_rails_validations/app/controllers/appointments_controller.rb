@@ -14,7 +14,11 @@ class AppointmentsController < ApplicationController
 
     # redirect_to "/appointments/#{@appointment.id}"
     # redirect_to appointment_path(@appointment)
-    redirect_to @appointment
+    if @appointment.valid?
+      redirect_to @appointment
+    else
+      render :new
+    end
   end
 
   def edit
