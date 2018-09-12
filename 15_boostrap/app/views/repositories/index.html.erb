@@ -1,0 +1,9 @@
+<% if flash[:notice] %>
+<div class="alert alert-success" role="alert">
+  <%= flash[:notice] %>
+</div>
+<% end %>
+
+<% @repositories.each do |repo| %>
+  <li><%= repo.name %></li>
+<% end %>
