@@ -1,0 +1,25 @@
+# Functional Programming
+- functions as objects
+  - pass around
+  - pass as arguments to functions
+  - return from functions unexecuted
+- difference between a function reference and execution
+- arrows
+  - if you have curlies, need to return
+  - options syntax around it
+- callbacks
+  - array methods: .forEach, .map, .filter, .reduce, .sort
+    - MDN for documentation
+    - what are return value, what are arguments, what args are optional, does it mutate
+- higher-order functions
+  - functions that take a callback function argument or return a refernce to a function
+- closures
+  - using functions to encapsulate data (variable info, argument info, etc) into an interior function and protect it from the outside world
+- IIFEs
+  - Immediately Invoked Function Expression
+  - wrap the definition in parentheses and execute with parentheses
+  - when we have code we only want to be executed once
+  - don't save the outer function to a variable
+- pure functions
+  - not mutate data, return a copy with new data
+  - same input, same output
