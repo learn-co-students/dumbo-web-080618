@@ -1,17 +1,19 @@
 # Goals
-- understand the role request/response plays in our applications
-- learn fetch syntax
-- understand promises and how to handle them
-- render DOM elements based on fetched data
+- code structure
+- more fetching
+  - promises, callbacks
+- more rendering / putting elements on the DOM
+- removing elements from the dom
+- creating classes
+- most often used dom manipulation methods
+  - grab element, setting innerHTML
+  - create element and append to DOM
 
-### JSON
-- JavaScript Object Notation
-- language agnostic way of sending data
-- any language can use it
-
-### XMLHTTPRequest
-- old way of getting data
-- too many steps
+## Deliverable
+- click on a brew
+  - figure out which coffee it is
+  - get data from that coffee show page
+- show full detail information about a brew
 
 ### Fetch
 - newer interface with simpler syntax
@@ -48,10 +50,15 @@ fetch(url)
 ```
 
 ## How to Put Things on the DOM
+#### Create Element Way
 1. create an element
 2. add some properties to it
 3. add any event listeners to it (optional)
 4. append to DOM
+
+#### Inner HTML Way
+1. find something ALREADY on the DOM
+2. set its inner HTML
 
 
 
