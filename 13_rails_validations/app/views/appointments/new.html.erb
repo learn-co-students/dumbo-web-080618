@@ -1,0 +1,13 @@
+<% if @appointment.errors.any? %>
+    <% @appointment.errors.full_messages.each do |error| %>
+      <p><%= error %></p>
+    <% end %>
+<% end %>
+
+<%= form_for @appointment do |f| %>
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+  <%= f.collection_select :patient_id, Patient.all, :id, :name %>
+  <%= f.collection_select :doctor_id, Doctor.all, :id, :name %>
+  <%= f.submit %>
+<% end %>

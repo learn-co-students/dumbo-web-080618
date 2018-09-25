@@ -1,0 +1,6 @@
+<h1>Hello from the views!</h1>
+
+<% @books.each do |book| %>
+  <li><%= link_to book.title, "/books/#{book.id}" %></li>
+  <!-- <li><a href="/books/<%# book.id %>"><%= book.title %></a></li> -->
+<% end %>

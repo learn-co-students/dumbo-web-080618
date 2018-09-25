@@ -1,0 +1,15 @@
+.ui.header {
+  margin: 0;
+  background-color: #F45800;
+  color: #FFFFFF;
+  padding: 30px;
+  text-align: center;
+}
+
+#logo {
+  font-size: 4rem;
+}
+
+img {
+  width: 50px;
+}

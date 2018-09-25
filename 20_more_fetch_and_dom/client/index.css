@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  -webkit-padding-start: 0px;
+  list-style: none;
+}
+
+h1 {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.brew {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
+#brew-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Josefin Slab', serif;
+  font-size: large;
+}
+
+#brew-detail {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}

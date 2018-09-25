@@ -1,0 +1,4 @@
+<%= form_tag("/authors/#{@author.id}", method: :patch) do %>
+  <%= text_field_tag :name, @author.name %>
+  <%= submit_tag "Edit an Author" %>
+<% end %>
