@@ -1,3 +1,5 @@
+require "pry"
+
 class Fan
 
   attr_accessor :name, :artist_id, :id
@@ -23,7 +25,7 @@ class Fan
     SQL
 
     new_fan_hash = DB[:conn].execute(beef)
-    # binding.pry
+    binding.pry
     self.id = new_fan_hash[0]["id"]
 
     # DESC -> 10, 9, 8, 7....
@@ -61,4 +63,7 @@ class Fan
   end
 end
 
+
+binding.pry
+0
 # fan = #<Fan:0x21378172>
