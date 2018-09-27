@@ -1,9 +1,11 @@
 function getToys() {
   // fetch data
-  return fetch('http://localhost:3000/toys')
+  const url = 'http://localhost:3000/toys'
+  return fetch(url)
     .then(r => r.json())
 }
 
+// for posts/patches give fetch a second argument of an object including method, headers and body
 function createToy(data) {
   const url = 'http://localhost:3000/toys'
   return fetch(url, {
