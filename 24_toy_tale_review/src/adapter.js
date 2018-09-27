@@ -31,3 +31,15 @@ function updateLikes(data, id) {
   })
     .then(r => r.json())
 }
+
+function deleteToy(id) {
+  const url = `http://localhost:3000/toys/${id}`
+  return fetch(url, {
+      method: "DELETE", // *GET, POST, PUT, DELETE, etc.
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      }
+  })
+    .then(r => r.json())
+}

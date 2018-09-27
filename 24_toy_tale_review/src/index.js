@@ -45,7 +45,8 @@ function showToy(toy) {
   div.innerHTML = `<h2>${toy.name}</h2>
     <img src=${toy.image} class="toy-avatar">
     <p>${toy.likes} Likes </p>
-    <button data-id=${toy.id} data-likes=${toy.likes} class="like-btn">Like <3</button>`
+    <button data-id=${toy.id} data-likes=${toy.likes} class="like-btn">Like <3</button>
+    <button data-id=${toy.id} class="delete-btn">Donate Toy</button>`
   div.addEventListener('click', increaseLikes)
 
       // append to DOM
@@ -56,13 +57,13 @@ function increaseLikes(event) {
   // this is event delegation
   // our listener is on an element which contains the one we want to listen for
   // we need to write logic to make sure our code only executes if the right thing is clicked
-  if (event.target.tagName === "BUTTON") {
+  if (event.target.className === "like-btn") {
 
     // here we optistically update likes
     // this means we update the DOM before our PATCH request goes through
     const button = event.target
-    const parent = button.parentElement
-    const likeEl = parent.querySelector('p')
+    const toyCard = button.parentElement
+    const likeEl = toyCard.querySelector('p')
     const likes = parseInt(event.target.dataset.likes) + 1
     likeEl.innerText = `${likes} Likes`
     event.target.dataset.likes = likes
@@ -72,6 +73,16 @@ function increaseLikes(event) {
       "likes": likes
     }
     updateLikes(data, event.target.dataset.id)
+  } else if (event.target.className === "delete-btn") {
+    // delete request
+    // optimistically remove the toy from the page
+    const id = event.target.dataset.id
+    const toyCard = event.target.parentElement
+    const container = toyCard.parentElement
+    container.removeChild(toyCard)
+
+    // the send delete request to backend
+    deleteToy(id)
   }
 }
 

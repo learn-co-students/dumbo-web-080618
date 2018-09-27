@@ -50,6 +50,18 @@ button {
   justify-self: center;
 }
 
+.delete-btn {
+  position: relative;
+  background-color: indigo;
+  border: none;
+  border-radius: 5px;
+  height: 3rem;
+  width: max-content;
+  color: whitesmoke;
+  font-size: 18px;
+  justify-self: center;
+}
+
 button:hover {
   background-color: whitesmoke;
   border: #e04b52 solid 1px;
