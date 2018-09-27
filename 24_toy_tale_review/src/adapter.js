@@ -34,6 +34,8 @@ function updateLikes(data, id) {
 
 function deleteToy(id) {
   const url = `http://localhost:3000/toys/${id}`
+  // delete request doesn't need a body
+  // it may or may not need headers depending on the API, so include them just in case
   return fetch(url, {
       method: "DELETE", // *GET, POST, PUT, DELETE, etc.
       headers: {
