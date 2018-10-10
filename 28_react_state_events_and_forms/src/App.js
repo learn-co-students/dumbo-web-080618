@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import '../App.css';
-import BeyContainer from './BeyContainer';
-import Form from './Form';
+import './App.css';
+import BeyContainer from './Components/BeyContainer';
+import Form from './Components/Form';
 
 class App extends Component {
   state = {
