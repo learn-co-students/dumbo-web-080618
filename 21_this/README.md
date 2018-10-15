@@ -20,9 +20,9 @@
 
 2.  `this` for a simple function call `fn()` will be the window object (browser) or the global object (Node). If we are in [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) `this` will be `undefined`.
 
-<!-- 3.  `this` within a constructor function called with the keyword `new` in front will point to the newly created object:
+3.  `this` within a constructor function called with the keyword `new` in front will point to the newly created object:
   - Note that **we cannot use the `new` keyword for arrow functions**.
-  - [MDN Article on the `new` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new) -->
+  - [MDN Article on the `new` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
 
 4.  `this` within a function called with `apply/call/bind` will be the object passed as the first parameter.
 
