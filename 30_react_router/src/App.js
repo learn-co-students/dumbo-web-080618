@@ -4,6 +4,8 @@ import BeyContainer from './Components/BeyContainer';
 import Form from './Components/Form';
 import Navbar from './Components/Navbar';
 import Login from './Components/Login';
+import TestComponent from './Components/TestComponent';
+import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   state = {
@@ -27,9 +29,18 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Navbar />
         <h1>The Queen is Bey</h1>
-        <Form handleSubmit={this.handleSubmit}/><br/>
-        <BeyContainer BeyArray={this.state.BeyArray}/>
+        <Switch>
+          {/*<Form handleSubmit={this.handleSubmit}/><br/>*/}
+          //If url equals "/bey/new" app will see "/bey" first. This is why we want the most specific route listed first so the app sees "/bey/new" as the first condition
+          <Route path="/bey/new" component={TestComponent} />
+          <Route path="/bey/:id" component={TestComponent} />
+          <Route exact path="/bey" render={() => {
+            return <BeyContainer BeyArray={this.state.BeyArray}/>
+          }} />
+          <Route path="/login" component={Login} />
+        </Switch>
       </div>
     );
   }
