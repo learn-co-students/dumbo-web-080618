@@ -32,8 +32,8 @@ class Parent extends React.Component {
     return (
       <div className="component parent">
         { this.whateverComponentName }
-       <span style={ { fontSize: 81, display: "block"} }>{ this.props.randomNumber }</span>
-
+       {/*<span style={ { fontSize: 81, display: "block"} }>{ this.props.randomNumber }</span>*/}
+       <Child />
       </div>)
   }
 
