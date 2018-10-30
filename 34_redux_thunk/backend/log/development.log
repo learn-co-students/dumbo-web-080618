@@ -1,0 +1,1058 @@
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "hobbits"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "hobbits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" varchar, "field" varchar, "seniority" varchar, "position" varchar, "key_skill" varchar, "employment_type" varchar, "image_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180220154516)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-22 23:27:02.995656"], ["updated_at", "2018-10-22 23:27:02.995656"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "hobbits"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "hobbits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" varchar, "field" varchar, "seniority" varchar, "position" varchar, "key_skill" varchar, "employment_type" varchar, "image_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180220154516)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-22 23:27:03.013255"], ["updated_at", "2018-10-22 23:27:03.013255"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2018-10-22 23:27:03.016402"], ["key", "environment"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Carc"], ["title", "Central Construction Developer"], ["field", "Education"], ["seniority", "Internal"], ["position", "Consultant"], ["key_skill", "Teamwork"], ["employment_type", "Internship"], ["created_at", "2018-10-22 23:27:03.729697"], ["updated_at", "2018-10-22 23:27:03.729697"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Beorn"], ["title", "Healthcare Manager"], ["field", "Banking"], ["seniority", "Investor"], ["position", "Manager"], ["key_skill", "Networking skills"], ["employment_type", "Contract"], ["created_at", "2018-10-22 23:27:03.732708"], ["updated_at", "2018-10-22 23:27:03.732708"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bilbo Baggins"], ["title", "Central Accounting Technician"], ["field", "Manufacturing"], ["seniority", "Customer"], ["position", "Designer"], ["key_skill", "Fast learner"], ["employment_type", "Part-time"], ["created_at", "2018-10-22 23:27:03.734937"], ["updated_at", "2018-10-22 23:27:03.734937"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Gollum"], ["title", "International Officer"], ["field", "Manufacturing"], ["seniority", "Investor"], ["position", "Associate"], ["key_skill", "Confidence"], ["employment_type", "Part-time"], ["created_at", "2018-10-22 23:27:03.738211"], ["updated_at", "2018-10-22 23:27:03.738211"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bert"], ["title", "International Legal Associate"], ["field", "Administration"], ["seniority", "Global"], ["position", "Manager"], ["key_skill", "Technical savvy"], ["employment_type", "Internship"], ["created_at", "2018-10-22 23:27:03.741479"], ["updated_at", "2018-10-22 23:27:03.741479"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dori"], ["title", "Regional Marketing Architect"], ["field", "Accounting"], ["seniority", "Lead"], ["position", "Specialist"], ["key_skill", "Communication"], ["employment_type", "Part-time"], ["created_at", "2018-10-22 23:27:03.744800"], ["updated_at", "2018-10-22 23:27:03.744800"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Gandalf The Grey"], ["title", "Investor Consultant"], ["field", "Banking"], ["seniority", "Senior"], ["position", "Producer"], ["key_skill", "Communication"], ["employment_type", "Temporary"], ["created_at", "2018-10-22 23:27:16.588448"], ["updated_at", "2018-10-22 23:27:16.588448"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bullroarer Took"], ["title", "Senior Marketing Analyst"], ["field", "Legal"], ["seniority", "Product"], ["position", "Engineer"], ["key_skill", "Networking skills"], ["employment_type", "Part-time"], ["created_at", "2018-10-22 23:27:16.596050"], ["updated_at", "2018-10-22 23:27:16.596050"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roac"], ["title", "Internal Technology Planner"], ["field", "Marketing"], ["seniority", "Lead"], ["position", "Assistant"], ["key_skill", "Confidence"], ["employment_type", "Internship"], ["created_at", "2018-10-22 23:27:16.599633"], ["updated_at", "2018-10-22 23:27:16.599633"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bombur"], ["title", "Chief IT Representative"], ["field", "Manufacturing"], ["seniority", "Forward"], ["position", "Strategist"], ["key_skill", "Leadership"], ["employment_type", "Full-time"], ["created_at", "2018-10-22 23:27:16.602255"], ["updated_at", "2018-10-22 23:27:16.602255"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bombur"], ["title", "Lead Officer"], ["field", "Banking"], ["seniority", "Lead"], ["position", "Manager"], ["key_skill", "Leadership"], ["employment_type", "Commission"], ["created_at", "2018-10-22 23:27:16.604872"], ["updated_at", "2018-10-22 23:27:16.604872"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Carc"], ["title", "Advertising Designer"], ["field", "Education"], ["seniority", "Investor"], ["position", "Developer"], ["key_skill", "Proactive"], ["employment_type", "Commission"], ["created_at", "2018-10-22 23:27:16.607860"], ["updated_at", "2018-10-22 23:27:16.607860"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mHobbit Load (1.2ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" LIMIT ?[0m  [["LIMIT", 11]]
+Started PATCH "/hobbit/2" for 127.0.0.1 at 2018-10-22 19:42:05 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [PATCH] "/hobbit/2"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started PATCH "/hobbit/1" for 127.0.0.1 at 2018-10-22 19:47:52 -0400
+  
+ActionController::RoutingError (No route matches [PATCH] "/hobbit/1"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started PATCH "/hobbit/1" for 127.0.0.1 at 2018-10-22 19:51:04 -0400
+  
+ActionController::RoutingError (No route matches [PATCH] "/hobbit/1"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started PATCH "/hobbits/1" for 127.0.0.1 at 2018-10-22 19:52:02 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HobbitsController#update as JSON
+  Parameters: {"id"=>"1", "name"=>"Oin", "title"=>"Banking Specialist!", "key_skill"=>"Proactive", "field"=>"Farming", "seniority"=>"Chief", "position"=>"Assistant", "employment_type"=>"Commission", "image_url"=>"https://vignette.wikia.nocookie.net/lotr/images/e/e8/Oin.jpg/revision/latest?cb=20120908125247", "created_at"=>"2018-02-20T15:57:05.513Z", "updated_at"=>"2018-02-20T16:46:38.786Z", "hobbit"=>{"id"=>"1", "name"=>"Oin", "title"=>"Banking Specialist!", "field"=>"Farming", "seniority"=>"Chief", "position"=>"Assistant", "key_skill"=>"Proactive", "employment_type"=>"Commission", "image_url"=>"https://vignette.wikia.nocookie.net/lotr/images/e/e8/Oin.jpg/revision/latest?cb=20120908125247", "created_at"=>"2018-02-20T15:57:05.513Z", "updated_at"=>"2018-02-20T16:46:38.786Z"}}
+  [1m[36mHobbit Load (0.4ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :image_url, :created_at, :updated_at
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "hobbits" SET "name" = ?, "title" = ?, "key_skill" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["name", "Oin"], ["title", "Banking Specialist!"], ["key_skill", "Proactive"], ["updated_at", "2018-10-22 23:52:02.795028"], ["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 21ms (Views: 0.5ms | ActiveRecord: 2.8ms)
+
+
+Started PATCH "/hobbits/1" for 127.0.0.1 at 2018-10-22 19:53:11 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"id"=>"1", "name"=>"Oin", "title"=>"Banking Specialist!", "key_skill"=>"Proactive", "field"=>"Farming", "seniority"=>"Chief", "position"=>"Assistant", "employment_type"=>"Commission", "image_url"=>"https://vignette.wikia.nocookie.net/lotr/images/e/e8/Oin.jpg/revision/latest?cb=20120908125247", "created_at"=>"2018-02-20T15:57:05.513Z", "updated_at"=>"2018-02-20T16:46:38.786Z", "hobbit"=>{"id"=>"1", "name"=>"Oin", "title"=>"Banking Specialist!", "field"=>"Farming", "seniority"=>"Chief", "position"=>"Assistant", "key_skill"=>"Proactive", "employment_type"=>"Commission", "image_url"=>"https://vignette.wikia.nocookie.net/lotr/images/e/e8/Oin.jpg/revision/latest?cb=20120908125247", "created_at"=>"2018-02-20T15:57:05.513Z", "updated_at"=>"2018-02-20T16:46:38.786Z"}}
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :image_url, :created_at, :updated_at
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/hobbits/1" for 127.0.0.1 at 2018-10-22 19:53:38 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"id"=>"1", "name"=>"Oin", "title"=>"Banking Specialist!", "key_skill"=>"Proactive", "field"=>"Farming", "seniority"=>"Chief", "position"=>"Assistant", "employment_type"=>"Commission", "image_url"=>"https://vignette.wikia.nocookie.net/lotr/images/e/e8/Oin.jpg/revision/latest?cb=20120908125247", "created_at"=>"2018-02-20T15:57:05.513Z", "updated_at"=>"2018-02-20T16:46:38.786Z", "hobbit"=>{"id"=>"1", "name"=>"Oin", "title"=>"Banking Specialist!", "field"=>"Farming", "seniority"=>"Chief", "position"=>"Assistant", "key_skill"=>"Proactive", "employment_type"=>"Commission", "image_url"=>"https://vignette.wikia.nocookie.net/lotr/images/e/e8/Oin.jpg/revision/latest?cb=20120908125247", "created_at"=>"2018-02-20T15:57:05.513Z", "updated_at"=>"2018-02-20T16:46:38.786Z"}}
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :image_url, :created_at, :updated_at
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started PATCH "/hobbits/1" for 127.0.0.1 at 2018-10-22 19:55:44 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HobbitsController#update as JSON
+  Parameters: {"id"=>"1", "name"=>"Oin", "title"=>"Banking Specialist!", "key_skill"=>"Proactive", "field"=>"Farming", "seniority"=>"Chief", "position"=>"Assistant", "employment_type"=>"Commission", "image_url"=>"https://vignette.wikia.nocookie.net/lotr/images/e/e8/Oin.jpg/revision/latest?cb=20120908125247", "created_at"=>"2018-02-20T15:57:05.513Z", "updated_at"=>"2018-02-20T16:46:38.786Z", "hobbit"=>{"id"=>"1", "name"=>"Oin", "title"=>"Banking Specialist!", "field"=>"Farming", "seniority"=>"Chief", "position"=>"Assistant", "key_skill"=>"Proactive", "employment_type"=>"Commission", "image_url"=>"https://vignette.wikia.nocookie.net/lotr/images/e/e8/Oin.jpg/revision/latest?cb=20120908125247", "created_at"=>"2018-02-20T15:57:05.513Z", "updated_at"=>"2018-02-20T16:46:38.786Z"}}
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :created_at, :updated_at
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "hobbits" SET "image_url" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["image_url", "https://vignette.wikia.nocookie.net/lotr/images/e/e8/Oin.jpg/revision/latest?cb=20120908125247"], ["updated_at", "2018-10-22 23:55:44.857179"], ["id", 1]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 21ms (Views: 0.6ms | ActiveRecord: 3.9ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "hobbits"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "hobbits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" varchar, "field" varchar, "seniority" varchar, "position" varchar, "key_skill" varchar, "employment_type" varchar, "image_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180220154516)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-23 20:35:15.680511"], ["updated_at", "2018-10-23 20:35:15.680511"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "hobbits"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "hobbits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" varchar, "field" varchar, "seniority" varchar, "position" varchar, "key_skill" varchar, "employment_type" varchar, "image_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180220154516)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-23 20:35:15.702031"], ["updated_at", "2018-10-23 20:35:15.702031"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2018-10-23 20:35:15.704820"], ["key", "environment"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Elrond"], ["title", "Dynamic Supervisor"], ["field", "Community-Services"], ["seniority", "International"], ["position", "Coordinator"], ["key_skill", "Leadership"], ["employment_type", "Commission"], ["created_at", "2018-10-23 20:35:16.343491"], ["updated_at", "2018-10-23 20:35:16.343491"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bard the Bowman"], ["title", "Lead Design Agent"], ["field", "Real-Estate"], ["seniority", "Central"], ["position", "Executive"], ["key_skill", "Communication"], ["employment_type", "Contract"], ["created_at", "2018-10-23 20:35:16.346091"], ["updated_at", "2018-10-23 20:35:16.346091"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dwalin"], ["title", "Legal Administrator"], ["field", "Retail"], ["seniority", "Investor"], ["position", "Coordinator"], ["key_skill", "Fast learner"], ["employment_type", "Commission"], ["created_at", "2018-10-23 20:35:16.348520"], ["updated_at", "2018-10-23 20:35:16.348520"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Lord of the Eagles"], ["title", "IT Agent"], ["field", "Education"], ["seniority", "Legacy"], ["position", "Officer"], ["key_skill", "Technical savvy"], ["employment_type", "Contract"], ["created_at", "2018-10-23 20:35:16.350875"], ["updated_at", "2018-10-23 20:35:16.350875"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bofur"], ["title", "District Construction Planner"], ["field", "Healthcare"], ["seniority", "Internal"], ["position", "Assistant"], ["key_skill", "Confidence"], ["employment_type", "Contract"], ["created_at", "2018-10-23 20:35:16.353171"], ["updated_at", "2018-10-23 20:35:16.353171"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kili"], ["title", "Real-Estate Assistant"], ["field", "Mining"], ["seniority", "Product"], ["position", "Engineer"], ["key_skill", "Work under pressure"], ["employment_type", "Commission"], ["created_at", "2018-10-23 20:35:16.355888"], ["updated_at", "2018-10-23 20:35:16.355888"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bombur"], ["title", "Design Developer"], ["field", "Accounting"], ["seniority", "Internal"], ["position", "Consultant"], ["key_skill", "Technical savvy"], ["employment_type", "Temporary"], ["created_at", "2018-10-23 20:35:23.533806"], ["updated_at", "2018-10-23 20:35:23.533806"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Elrond"], ["title", "Design Facilitator"], ["field", "Sales"], ["seniority", "Forward"], ["position", "Manager"], ["key_skill", "Problem solving"], ["employment_type", "Commission"], ["created_at", "2018-10-23 20:35:23.537932"], ["updated_at", "2018-10-23 20:35:23.537932"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bombur"], ["title", "Investor Officer"], ["field", "Construction"], ["seniority", "International"], ["position", "Orchestrator"], ["key_skill", "Self-motivated"], ["employment_type", "Contract"], ["created_at", "2018-10-23 20:35:23.540651"], ["updated_at", "2018-10-23 20:35:23.540651"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dwalin"], ["title", "Marketing Officer"], ["field", "IT"], ["seniority", "Customer"], ["position", "Developer"], ["key_skill", "Fast learner"], ["employment_type", "Part-time"], ["created_at", "2018-10-23 20:35:23.543606"], ["updated_at", "2018-10-23 20:35:23.543606"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dain"], ["title", "Hospitality Engineer"], ["field", "Consulting"], ["seniority", "Lead"], ["position", "Strategist"], ["key_skill", "Communication"], ["employment_type", "Part-time"], ["created_at", "2018-10-23 20:35:23.546131"], ["updated_at", "2018-10-23 20:35:23.546131"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "hobbits" ("name", "title", "field", "seniority", "position", "key_skill", "employment_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bard the Bowman"], ["title", "IT Agent"], ["field", "Retail"], ["seniority", "Dynamic"], ["position", "Agent"], ["key_skill", "Confidence"], ["employment_type", "Commission"], ["created_at", "2018-10-23 20:35:23.549212"], ["updated_at", "2018-10-23 20:35:23.549212"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/heroines" for 127.0.0.1 at 2018-10-23 16:36:35 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/heroines"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-23 16:36:36 -0400
+Processing by HobbitsController#index as HTML
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 23ms (Views: 19.2ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/hobbits/1" for 127.0.0.1 at 2018-10-23 16:43:34 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"hobbit"=>{"id"=>1, "name"=>"Oin", "title"=>"Banking Specialist!!", "key_skill"=>"Proactive", "field"=>"Farming", "seniority"=>"Chief", "position"=>"Assistant", "employment_type"=>"Commission", "image_url"=>"https://vignette.wikia.nocookie.net/lotr/images/e/e8/Oin.jpg/revision/latest?cb=20120908125247", "created_at"=>"2018-02-20T15:57:05.513Z", "updated_at"=>"2018-02-20T16:46:38.786Z"}, "id"=>"1"}
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :created_at, :updated_at
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "hobbits" SET "name" = ?, "title" = ?, "key_skill" = ?, "image_url" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["name", "Oin"], ["title", "Banking Specialist!!"], ["key_skill", "Proactive"], ["image_url", "https://vignette.wikia.nocookie.net/lotr/images/e/e8/Oin.jpg/revision/latest?cb=20120908125247"], ["updated_at", "2018-10-23 20:43:34.708174"], ["id", 1]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 20ms (Views: 0.7ms | ActiveRecord: 4.0ms)
+
+
+Started PATCH "/hobbits/1" for 127.0.0.1 at 2018-10-23 16:49:06 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"hobbit"=>{"id"=>1, "name"=>"Oin", "title"=>"Banking Specialist!", "key_skill"=>"Proactive", "field"=>"Farming", "seniority"=>"Chief", "position"=>"Assistant", "employment_type"=>"Commission", "image_url"=>"https://vignette.wikia.nocookie.net/lotr/images/e/e8/Oin.jpg/revision/latest?cb=20120908125247", "created_at"=>"2018-02-20T15:57:05.513Z", "updated_at"=>"2018-02-20T16:46:38.786Z"}, "id"=>"1"}
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :created_at, :updated_at
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "hobbits" SET "title" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["title", "Banking Specialist!"], ["updated_at", "2018-10-23 20:49:06.618468"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 30ms (Views: 0.7ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/hobbits/2" for 127.0.0.1 at 2018-10-23 16:53:32 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"hobbit"=>{"id"=>2, "name"=>"Roac", "title"=>"Banking Supervisor!!", "key_skill"=>"Self-motivated", "field"=>"Design", "seniority"=>"Central", "position"=>"Technician", "employment_type"=>"Temporary", "image_url"=>"https://orig00.deviantart.net/a3cb/f/2014/177/3/a/mme__16__our_list_of_allies_grows_thin____by_peckishowl-d6p33f7.jpg", "created_at"=>"2018-02-20T15:57:05.519Z", "updated_at"=>"2018-02-20T16:47:30.342Z"}, "id"=>"2"}
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :created_at, :updated_at
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "hobbits" SET "name" = ?, "title" = ?, "key_skill" = ?, "image_url" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["name", "Roac"], ["title", "Banking Supervisor!!"], ["key_skill", "Self-motivated"], ["image_url", "https://orig00.deviantart.net/a3cb/f/2014/177/3/a/mme__16__our_list_of_allies_grows_thin____by_peckishowl-d6p33f7.jpg"], ["updated_at", "2018-10-23 20:53:32.456697"], ["id", 2]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 20ms (Views: 0.6ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/hobbits/2" for 127.0.0.1 at 2018-10-23 16:53:41 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"hobbit"=>{"id"=>2, "name"=>"Roac", "title"=>"Banking Supervisor!!!", "key_skill"=>"Self-motivated", "field"=>"Design", "seniority"=>"Central", "position"=>"Technician", "employment_type"=>"Temporary", "image_url"=>"https://orig00.deviantart.net/a3cb/f/2014/177/3/a/mme__16__our_list_of_allies_grows_thin____by_peckishowl-d6p33f7.jpg", "created_at"=>"2018-02-20T15:57:05.519Z", "updated_at"=>"2018-02-20T16:47:30.342Z"}, "id"=>"2"}
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :created_at, :updated_at
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "hobbits" SET "title" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["title", "Banking Supervisor!!!"], ["updated_at", "2018-10-23 20:53:41.949417"], ["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/hobbits/2" for 127.0.0.1 at 2018-10-23 16:53:43 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"hobbit"=>{"id"=>2, "name"=>"Roac", "title"=>"Banking Supervisor!!!", "key_skill"=>"Self-motivated", "field"=>"Design", "seniority"=>"Central", "position"=>"Technician", "employment_type"=>"Temporary", "image_url"=>"https://orig00.deviantart.net/a3cb/f/2014/177/3/a/mme__16__our_list_of_allies_grows_thin____by_peckishowl-d6p33f7.jpg", "created_at"=>"2018-02-20T15:57:05.519Z", "updated_at"=>"2018-02-20T16:47:30.342Z"}, "id"=>"2"}
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :created_at, :updated_at
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/hobbits/2" for 127.0.0.1 at 2018-10-23 16:53:44 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"hobbit"=>{"id"=>2, "name"=>"Roac", "title"=>"Banking Supervisor!!!", "key_skill"=>"Self-motivated", "field"=>"Design", "seniority"=>"Central", "position"=>"Technician", "employment_type"=>"Temporary", "image_url"=>"https://orig00.deviantart.net/a3cb/f/2014/177/3/a/mme__16__our_list_of_allies_grows_thin____by_peckishowl-d6p33f7.jpg", "created_at"=>"2018-02-20T15:57:05.519Z", "updated_at"=>"2018-02-20T16:47:30.342Z"}, "id"=>"2"}
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :created_at, :updated_at
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/hobbits/2" for 127.0.0.1 at 2018-10-23 16:53:46 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"hobbit"=>{"id"=>2, "name"=>"Roac", "title"=>"Banking Supervisor!!!", "key_skill"=>"Self-motivated", "field"=>"Design", "seniority"=>"Central", "position"=>"Technician", "employment_type"=>"Temporary", "image_url"=>"https://orig00.deviantart.net/a3cb/f/2014/177/3/a/mme__16__our_list_of_allies_grows_thin____by_peckishowl-d6p33f7.jpg", "created_at"=>"2018-02-20T15:57:05.519Z", "updated_at"=>"2018-02-20T16:47:30.342Z"}, "id"=>"2"}
+  [1m[36mHobbit Load (0.1ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :created_at, :updated_at
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/hobbits/2" for 127.0.0.1 at 2018-10-23 16:53:49 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"hobbit"=>{"id"=>2, "name"=>"Roac", "title"=>"Banking Supervisor!!!", "key_skill"=>"Self-motivated", "field"=>"Design", "seniority"=>"Central", "position"=>"Technician", "employment_type"=>"Temporary", "image_url"=>"https://orig00.deviantart.net/a3cb/f/2014/177/3/a/mme__16__our_list_of_allies_grows_thin____by_peckishowl-d6p33f7.jpg", "created_at"=>"2018-02-20T15:57:05.519Z", "updated_at"=>"2018-02-20T16:47:30.342Z"}, "id"=>"2"}
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :created_at, :updated_at
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/hobbits/2" for 127.0.0.1 at 2018-10-23 16:53:50 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"hobbit"=>{"id"=>2, "name"=>"Roac", "title"=>"Banking Supervisor!!!", "key_skill"=>"Self-motivated", "field"=>"Design", "seniority"=>"Central", "position"=>"Technician", "employment_type"=>"Temporary", "image_url"=>"https://orig00.deviantart.net/a3cb/f/2014/177/3/a/mme__16__our_list_of_allies_grows_thin____by_peckishowl-d6p33f7.jpg", "created_at"=>"2018-02-20T15:57:05.519Z", "updated_at"=>"2018-02-20T16:47:30.342Z"}, "id"=>"2"}
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :created_at, :updated_at
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/hobbits/2" for 127.0.0.1 at 2018-10-23 16:54:34 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"hobbit"=>{"id"=>2, "name"=>"Roac", "title"=>"Banking Supervisor!!!", "key_skill"=>"Self-motivated", "field"=>"Design", "seniority"=>"Central", "position"=>"Technician", "employment_type"=>"Temporary", "image_url"=>"https://orig00.deviantart.net/a3cb/f/2014/177/3/a/mme__16__our_list_of_allies_grows_thin____by_peckishowl-d6p33f7.jpg", "created_at"=>"2018-02-20T15:57:05.519Z", "updated_at"=>"2018-02-20T16:47:30.342Z"}, "id"=>"2"}
+  [1m[36mHobbit Load (0.1ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :created_at, :updated_at
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/hobbits/2" for 127.0.0.1 at 2018-10-23 16:54:50 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"hobbit"=>{"id"=>2, "name"=>"Roac", "title"=>"Banking Supervisor!!!!!!!!!!!!!!!!!!", "key_skill"=>"Self-motivated", "field"=>"Design", "seniority"=>"Central", "position"=>"Technician", "employment_type"=>"Temporary", "image_url"=>"https://orig00.deviantart.net/a3cb/f/2014/177/3/a/mme__16__our_list_of_allies_grows_thin____by_peckishowl-d6p33f7.jpg", "created_at"=>"2018-02-20T15:57:05.519Z", "updated_at"=>"2018-02-20T16:47:30.342Z"}, "id"=>"2"}
+  [1m[36mHobbit Load (0.4ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :created_at, :updated_at
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "hobbits" SET "title" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["title", "Banking Supervisor!!!!!!!!!!!!!!!!!!"], ["updated_at", "2018-10-23 20:54:50.447840"], ["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-23 16:55:11 -0400
+Processing by HobbitsController#index as HTML
+  [1m[36mHobbit Load (0.5ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-10-23 16:55:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-23 17:07:14 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-23 17:07:38 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.4ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-23 17:07:38 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/hobbits/2" for 127.0.0.1 at 2018-10-23 17:07:51 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"hobbit"=>{"id"=>2, "name"=>"Roac", "title"=>"Banking Supervisor!", "key_skill"=>"Self-motivated", "field"=>"Real-Estate", "seniority"=>"Central", "position"=>"Executive", "employment_type"=>"Contract", "image_url"=>"https://orig00.deviantart.net/a3cb/f/2014/177/3/a/mme__16__our_list_of_allies_grows_thin____by_peckishowl-d6p33f7.jpg", "created_at"=>"2018-10-23T20:35:16.346Z", "updated_at"=>"2018-10-23T20:54:50.447Z"}, "id"=>"2"}
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :created_at, :updated_at
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "hobbits" SET "title" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["title", "Banking Supervisor!"], ["updated_at", "2018-10-23 21:07:51.598165"], ["id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-23 17:07:53 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.4ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/static/js/bundle.js.map" for 127.0.0.1 at 2018-10-23 17:08:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/bundle.js.map"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/sockjs-node/info?t=1540328881321" for 127.0.0.1 at 2018-10-23 17:08:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/sockjs-node/info"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-10-25 08:42:00 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/georgina.hoagland/.rvm/gems/ruby-2.3.3/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/georgina.hoagland/.rvm/gems/ruby-2.3.3/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 08:42:20 -0400
+Processing by HobbitsController#index as HTML
+  [1m[36mHobbit Load (0.7ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 08:45:54 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 08:45:59 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 09:03:53 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 09:05:04 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 09:05:06 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 11:07:40 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.6ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 11:08:42 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.7ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 11:08:47 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 11:09:14 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.4ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 11:09:59 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 11:10:23 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 11:10:47 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 11:11:27 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 11:11:33 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 11:11:36 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.4ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 11:12:30 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.4ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 11:12:33 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 11:12:50 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.4ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 11:13:11 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 11:13:23 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 11:16:53 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 11:26:06 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-25 13:37:27 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-25 13:38:59 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-25 13:54:38 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-25 13:54:41 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.4ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-25 13:55:15 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-25 13:55:20 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-25 14:01:54 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-25 14:02:10 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.5ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-25 14:03:32 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-25 14:03:46 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (1.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-25 14:03:49 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (1.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-25 14:05:52 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-25 14:19:29 -0400
+Processing by HobbitsController#index as HTML
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-10-25 14:19:29 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-25 14:21:21 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-25 14:21:31 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-25 19:28:00 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-25 19:28:02 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mHobbit Load (9.8ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-29 21:23:50 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/hobbits/3" for 127.0.0.1 at 2018-10-29 21:25:24 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"id"=>"3", "name"=>"Dwalin", "title"=>"Legacy Designer", "key_skill"=>"Confidence", "field"=>"Healthcare", "seniority"=>"Dynamic", "position"=>"Officer", "employment_type"=>"Commission", "image_url"=>"https://vignette.wikia.nocookie.net/thehobbitfilm/images/1/1f/Dwalin.png/revision/latest/scale-to-width-down/1000?cb=20151220215202", "created_at"=>"2018-02-20T15:57:05.527Z", "updated_at"=>"2018-02-20T16:48:14.467Z", "hobbit"=>{"id"=>"3", "name"=>"Dwalin", "title"=>"Legacy Designer", "field"=>"Healthcare", "seniority"=>"Dynamic", "position"=>"Officer", "key_skill"=>"Confidence", "employment_type"=>"Commission", "image_url"=>"https://vignette.wikia.nocookie.net/thehobbitfilm/images/1/1f/Dwalin.png/revision/latest/scale-to-width-down/1000?cb=20151220215202", "created_at"=>"2018-02-20T15:57:05.527Z", "updated_at"=>"2018-02-20T16:48:14.467Z"}}
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :created_at, :updated_at
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "hobbits" SET "title" = ?, "key_skill" = ?, "image_url" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["title", "Legacy Designer"], ["key_skill", "Confidence"], ["image_url", "https://vignette.wikia.nocookie.net/thehobbitfilm/images/1/1f/Dwalin.png/revision/latest/scale-to-width-down/1000?cb=20151220215202"], ["updated_at", "2018-10-30 01:25:24.548609"], ["id", 3]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/hobbits/4" for 127.0.0.1 at 2018-10-29 21:25:30 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"id"=>"4", "name"=>"Balin", "title"=>"Regional Retail Technician", "key_skill"=>"Works well under pressure", "field"=>"Marketing", "seniority"=>"District", "position"=>"Producer", "employment_type"=>"Temporary", "image_url"=>"https://vignette.wikia.nocookie.net/lotr/images/5/52/Balin.jpg/revision/latest?cb=20120911171656", "created_at"=>"2018-02-20T15:57:05.533Z", "updated_at"=>"2018-02-20T16:49:00.890Z", "hobbit"=>{"id"=>"4", "name"=>"Balin", "title"=>"Regional Retail Technician", "field"=>"Marketing", "seniority"=>"District", "position"=>"Producer", "key_skill"=>"Works well under pressure", "employment_type"=>"Temporary", "image_url"=>"https://vignette.wikia.nocookie.net/lotr/images/5/52/Balin.jpg/revision/latest?cb=20120911171656", "created_at"=>"2018-02-20T15:57:05.533Z", "updated_at"=>"2018-02-20T16:49:00.890Z"}}
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :created_at, :updated_at
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "hobbits" SET "name" = ?, "title" = ?, "key_skill" = ?, "image_url" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["name", "Balin"], ["title", "Regional Retail Technician"], ["key_skill", "Works well under pressure"], ["image_url", "https://vignette.wikia.nocookie.net/lotr/images/5/52/Balin.jpg/revision/latest?cb=20120911171656"], ["updated_at", "2018-10-30 01:25:30.575546"], ["id", 4]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 2.9ms)
+
+
+Started PATCH "/hobbits/5" for 127.0.0.1 at 2018-10-29 21:25:33 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"id"=>"5", "name"=>"Bard the Bowman", "title"=>"Central Retail Specialist", "key_skill"=>"Fast learner", "field"=>"Technology", "seniority"=>"District", "position"=>"Liaison", "employment_type"=>"Part-time", "image_url"=>"https://vignette.wikia.nocookie.net/peter-jacksons-the-hobbit/images/f/fb/Bard_Bowman.jpg/revision/latest?cb=20160102183357", "created_at"=>"2018-02-20T15:57:05.541Z", "updated_at"=>"2018-02-20T16:49:30.913Z", "hobbit"=>{"id"=>"5", "name"=>"Bard the Bowman", "title"=>"Central Retail Specialist", "field"=>"Technology", "seniority"=>"District", "position"=>"Liaison", "key_skill"=>"Fast learner", "employment_type"=>"Part-time", "image_url"=>"https://vignette.wikia.nocookie.net/peter-jacksons-the-hobbit/images/f/fb/Bard_Bowman.jpg/revision/latest?cb=20160102183357", "created_at"=>"2018-02-20T15:57:05.541Z", "updated_at"=>"2018-02-20T16:49:30.913Z"}}
+  [1m[36mHobbit Load (0.1ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :created_at, :updated_at
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "hobbits" SET "name" = ?, "title" = ?, "key_skill" = ?, "image_url" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["name", "Bard the Bowman"], ["title", "Central Retail Specialist"], ["key_skill", "Fast learner"], ["image_url", "https://vignette.wikia.nocookie.net/peter-jacksons-the-hobbit/images/f/fb/Bard_Bowman.jpg/revision/latest?cb=20160102183357"], ["updated_at", "2018-10-30 01:25:33.884611"], ["id", 5]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 3.2ms)
+
+
+Started PATCH "/hobbits/6" for 127.0.0.1 at 2018-10-29 21:25:36 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"id"=>"6", "name"=>"The Great Goblin", "title"=>"Investor Coordinator", "key_skill"=>"Self-motivated", "field"=>"Technology", "seniority"=>"Customer", "position"=>"Representative", "employment_type"=>"Internship", "image_url"=>"http://kaiju.wdfiles.com/local--files/wiki%3Agreat_goblin/great_goblin_2012_01.jpg", "created_at"=>"2018-02-20T15:57:05.550Z", "updated_at"=>"2018-02-20T16:50:22.434Z", "hobbit"=>{"id"=>"6", "name"=>"The Great Goblin", "title"=>"Investor Coordinator", "field"=>"Technology", "seniority"=>"Customer", "position"=>"Representative", "key_skill"=>"Self-motivated", "employment_type"=>"Internship", "image_url"=>"http://kaiju.wdfiles.com/local--files/wiki%3Agreat_goblin/great_goblin_2012_01.jpg", "created_at"=>"2018-02-20T15:57:05.550Z", "updated_at"=>"2018-02-20T16:50:22.434Z"}}
+  [1m[36mHobbit Load (0.1ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Unpermitted parameters: :id, :field, :seniority, :position, :employment_type, :created_at, :updated_at
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "hobbits" SET "name" = ?, "title" = ?, "key_skill" = ?, "image_url" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["name", "The Great Goblin"], ["title", "Investor Coordinator"], ["key_skill", "Self-motivated"], ["image_url", "http://kaiju.wdfiles.com/local--files/wiki%3Agreat_goblin/great_goblin_2012_01.jpg"], ["updated_at", "2018-10-30 01:25:36.891872"], ["id", 6]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-29 21:26:02 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.6ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-29 21:26:03 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.4ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 14:27:20 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/georgina.hoagland/.rvm/gems/ruby-2.3.3/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/georgina.hoagland/.rvm/gems/ruby-2.3.3/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb (6.1ms)
+Completed 200 OK in 26ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-10-30 14:27:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-30 14:27:25 -0400
+Processing by HobbitsController#index as HTML
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hobbits/2" for 127.0.0.1 at 2018-10-30 14:30:27 -0400
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for HobbitsController):
+  
+actionpack (5.1.5) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.5) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.5) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started PATCH "/hobbits/2" for 127.0.0.1 at 2018-10-30 14:32:34 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"id"=>"2", "name"=>"Roac", "title"=>"Banking Supervisor!!!!!", "key_skill"=>"Self-motivated", "hobbit"=>{"id"=>"2", "name"=>"Roac", "title"=>"Banking Supervisor!!!!!", "key_skill"=>"Self-motivated"}}
+  [1m[36mHobbit Load (0.8ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "hobbits" SET "title" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["title", "Banking Supervisor!!!!!"], ["updated_at", "2018-10-30 18:32:34.961982"], ["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 2.7ms)
+
+
+Started PATCH "/hobbits/2" for 127.0.0.1 at 2018-10-30 14:32:36 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"id"=>"2", "name"=>"Roac", "title"=>"Banking Supervisor!!!!!", "key_skill"=>"Self-motivated", "hobbit"=>{"id"=>"2", "name"=>"Roac", "title"=>"Banking Supervisor!!!!!", "key_skill"=>"Self-motivated"}}
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/hobbits/2" for 127.0.0.1 at 2018-10-30 14:33:57 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"id"=>"2", "name"=>"Roac", "title"=>"Banking Supervisor!!!!", "key_skill"=>"Self-motivated", "hobbit"=>{"id"=>"2", "name"=>"Roac", "title"=>"Banking Supervisor!!!!", "key_skill"=>"Self-motivated"}}
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "hobbits" SET "title" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["title", "Banking Supervisor!!!!"], ["updated_at", "2018-10-30 18:33:57.118934"], ["id", 2]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 2.9ms)
+
+
+Started PATCH "/hobbits/2" for 127.0.0.1 at 2018-10-30 14:35:54 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"id"=>"2", "name"=>"Roac", "title"=>"Banking Supervisor!!!", "key_skill"=>"Self-motivated", "hobbit"=>{"id"=>"2", "name"=>"Roac", "title"=>"Banking Supervisor!!!", "key_skill"=>"Self-motivated"}}
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "hobbits" SET "title" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["title", "Banking Supervisor!!!"], ["updated_at", "2018-10-30 18:35:54.854432"], ["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-30 14:36:06 -0400
+Processing by HobbitsController#index as HTML
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/hobbits/2" for 127.0.0.1 at 2018-10-30 14:54:41 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"id"=>"2", "name"=>"Roac", "title"=>"Banking Supervisor!!!!", "key_skill"=>"Self-motivated", "hobbit"=>{"id"=>"2", "name"=>"Roac", "title"=>"Banking Supervisor!!!!", "key_skill"=>"Self-motivated"}}
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "hobbits" SET "title" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["title", "Banking Supervisor!!!!"], ["updated_at", "2018-10-30 18:54:41.150058"], ["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-30 14:55:08 -0400
+Processing by HobbitsController#index as HTML
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/hobbits/2" for 127.0.0.1 at 2018-10-30 14:55:27 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"id"=>"2", "name"=>"Roac", "title"=>"Banking Supervisor and DJ", "key_skill"=>"Self-motivated", "hobbit"=>{"id"=>"2", "name"=>"Roac", "title"=>"Banking Supervisor and DJ", "key_skill"=>"Self-motivated"}}
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "hobbits" SET "title" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["title", "Banking Supervisor and DJ"], ["updated_at", "2018-10-30 18:55:27.206165"], ["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/hobbits" for 127.0.0.1 at 2018-10-30 14:55:39 -0400
+Processing by HobbitsController#index as HTML
+  [1m[36mHobbit Load (0.2ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/hobbits/2" for 127.0.0.1 at 2018-10-30 14:59:04 -0400
+Processing by HobbitsController#update as JSON
+  Parameters: {"id"=>"2", "name"=>"Roac", "title"=>"Banking Supervisor and Photographer", "key_skill"=>"Self-motivated", "hobbit"=>{"id"=>"2", "name"=>"Roac", "title"=>"Banking Supervisor and Photographer", "key_skill"=>"Self-motivated"}}
+  [1m[36mHobbit Load (0.4ms)[0m  [1m[34mSELECT  "hobbits".* FROM "hobbits" WHERE "hobbits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "hobbits" SET "title" = ?, "updated_at" = ? WHERE "hobbits"."id" = ?[0m  [["title", "Banking Supervisor and Photographer"], ["updated_at", "2018-10-30 18:59:04.510920"], ["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-30 15:08:58 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.5ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hobbits/" for 127.0.0.1 at 2018-10-30 15:33:59 -0400
+Processing by HobbitsController#index as */*
+  [1m[36mHobbit Load (0.3ms)[0m  [1m[34mSELECT "hobbits".* FROM "hobbits"[0m
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.3ms)
+
+
